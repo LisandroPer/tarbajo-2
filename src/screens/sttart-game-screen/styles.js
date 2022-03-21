@@ -29,23 +29,13 @@ export const styles = StyleSheet.create({
         alignSelf: 'center',
     },
 
-    input: {
-        height: 51,
-        borderBottomColor: 'blue',
-        borderBottomWidth: 1,
-        marginBottom: 15,
-        fontSize: 30,
-        alignSelf: 'center', //crecerá según el tamaño del input. 
-        color: 'blue', 
-    },
-
     buttonContainer: {
         flex: 1,
         flexGrow: 0.20,
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         marginHorizontal: 20,
-        marginTop:30,
+        marginTop:20,
         paddingTop: 1,
-    }
+    },
 })
