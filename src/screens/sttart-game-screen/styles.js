@@ -38,4 +38,22 @@ export const styles = StyleSheet.create({
         marginTop:20,
         paddingTop: 1,
     },
+
+    confirmedText: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: 'blue',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderBottomColor: 'blue',
+        borderBottomWidth: 1,
+    },
+
+    containerConfirm: {
+        flex: 1,
+        flexGrow: 0.2,
+        justifyContent: 'center',
+        marginVertical: 10,
+        alignItems: 'center',
+    }
 })

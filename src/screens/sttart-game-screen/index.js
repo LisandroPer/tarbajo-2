@@ -6,7 +6,7 @@ import Card from '../../components/card';
 import Input from '../../components/input';
 
 
-const StartGameScreen = () => {
+const StartGameScreen = ( {onStartGame} ) => {
     const [inputValue, setInputValue] = useState(''); //el valor entrante será un sting, por eso las comillas.
     const [confirm, setConfirm] = useState(false); //el estado debe ser falso hasta que confirmemos el número que vamos a seleccioanr.
     const [selectNumber, setSelectNumber] = useState(''); //guarda el valor del número seleccionado.
@@ -30,6 +30,15 @@ const StartGameScreen = () => {
         setSelectNumber(choserNumber);
         setInputValue('');
     }
+
+    const confirmedOutput = confirm ? (
+        <View style={styles.containerConfirm}>
+          <Text style={styles.cardTitle}>El número que eligió es:</Text>
+          <Text style={styles.confirmedText}>{selectNumber}</Text>
+          <Button title='Comenzar juego' onPress={onStartGame(selectNumber)}/>
+        </View>
+    ) : null; //si se confirma se renderiza el número seleccionado, sino tira null.
+
     return(
         <TouchableWithoutFeedback onPress={()=> Keyboard.dismiss() /*EL touchable + Keyboard le da un efecto a los botones cuando son presionados*/}>
             <View style={styles.container}>
@@ -55,9 +64,10 @@ const StartGameScreen = () => {
                         <Button title='Confirmar' onPress={handleConfirmInput}/>
                     </View>
                 </Card>
+                {confirmedOutput}
             </View>
         </TouchableWithoutFeedback>
     )
 }
 
-export default StartGameScreen
+export default StartGameScreen;
