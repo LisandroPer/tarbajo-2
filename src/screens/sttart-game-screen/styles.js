@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import { colors, fontSize } from '../../constantes/temasApp'
 
 export const styles = StyleSheet.create({
     container: {
@@ -6,11 +7,11 @@ export const styles = StyleSheet.create({
     },
 
     cardTitle: {
-        fontSize: 20,
+        fontSize: fontSize.titleSize,
         fontWeight: 'bold',
         textAlign: 'center',
         marginVertical: 20,
-        color: '#6460e6'
+        color: colors.titleColor,
     },
 
     inputContainer: {
@@ -22,7 +23,7 @@ export const styles = StyleSheet.create({
     label: {
         fontSize: 14,
         fontWeight: 'bold',
-        color: '#1d93fd',
+        color: colors.labelColor,
         marginBottom: 10,
         justifyContent: 'center',
         alignSelf: 'center',
